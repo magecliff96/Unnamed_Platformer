@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Metroidvania Plant Guy"
+config/name="Unnamed_Platformer"
 run/main_scene="res://MainScene.tscn"
 config/icon="res://Assets/icon.png"
 
