@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "BaseState",
 "language": "GDScript",
-"path": "res://Scripts/State_Machines/BaseState.gd"
+"path": "res://Assets/player/states/base_state.gd"
 }, {
 "base": "Reference",
 "class": "MoveState",
 "language": "GDScript",
 "path": "res://Assets/player/states/move.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Scripts/State_Machines/Player.gd"
+"path": "res://Assets/player/player.gd"
 } ]
 _global_script_class_icons={
 "BaseState": "",
@@ -94,6 +94,10 @@ jump={
  ]
 }
 run={
+"deadzone": 0.5,
+"events": [  ]
+}
+dash={
 "deadzone": 0.5,
 "events": [  ]
 }
