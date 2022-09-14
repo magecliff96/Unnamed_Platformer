@@ -9,20 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
+"base": "Reference",
 "class": "BaseState",
 "language": "GDScript",
-"path": "res://assets/player/states/base_state.gd"
+"path": "res://Scripts/State_Machines/BaseState.gd"
 }, {
-"base": "BaseState",
+"base": "Reference",
 "class": "MoveState",
 "language": "GDScript",
-"path": "res://assets/player/states/move.gd"
+"path": "res://Assets/player/states/move.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "Player",
 "language": "GDScript",
-"path": "res://assets/player/player.gd"
+"path": "res://Scripts/State_Machines/Player.gd"
 } ]
 _global_script_class_icons={
 "BaseState": "",

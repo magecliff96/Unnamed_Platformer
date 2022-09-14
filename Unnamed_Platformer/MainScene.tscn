@@ -53,3 +53,4 @@ move_speed = 200.0
 jump_height = 150.0
 jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
+coyote_timer = null
