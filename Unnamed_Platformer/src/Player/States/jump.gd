@@ -1,32 +1,41 @@
 extends BaseState
 
+#setting up states using external ui
 export (NodePath) var fall_node
 export (NodePath) var run_node
 export (NodePath) var walk_node
 export (NodePath) var idle_node
+export (NodePath) var fly_node
 
-
+#setting up variables for different states
 onready var fall_state: BaseState = get_node(fall_node)
 onready var run_state: BaseState = get_node(run_node)
 onready var walk_state: BaseState = get_node(walk_node)
 onready var idle_state: BaseState = get_node(idle_node)
+onready var fly_state: BaseState = get_node(fly_node)
 
 var time : float
-var float_factor : float = 1
+var jump_time : float = 0.1 #active time with which jump can be held
+var jump_factor : float = 0.33
 
 func enter() -> void:
 	# This calls the base class enter function, which is necessary here
 	# to make sure the animation switches
 	.enter()
-#	if player.velocity.y > 0:
-#		player.velocity.y = 0
+	time = 0
+	player.jump_was_released = false
+	player.velocity.y += player.jump_velocity * jump_factor
 
+#proccess mid air physics
 func physics_process(delta: float) -> BaseState:
 	time += delta
-	if Input.is_action_pressed("jump"): 
-		player.velocity.y -= player.fall_gravity * float_factor * delta
-		#player.velocity.y = -player.move_speed * 2
+	if Input.is_action_pressed("jump") and time < jump_time: 
+		player.velocity.y += player.jump_velocity * (1-jump_factor) / jump_time * delta
 
+	if Input.is_action_just_released("jump"):
+		player.jump_was_released = true
+			
+	#move dictates moving direction
 	var move = 0
 	if Input.is_action_pressed("move_left"):
 		move = -1
@@ -35,11 +44,20 @@ func physics_process(delta: float) -> BaseState:
 		move = 1
 		player.animations.flip_h = false
 	
-	player.velocity.x = move * player.move_speed * 2
+	#updating velocity, move and slide updates the player's position 
+	#and new velocity
+	player.velocity.x = move * player.move_speed
+	player.velocity.y += player.jump_gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
-	if Input.is_action_just_released("jump"):
+	#changing states mid air?
+	if Input.is_action_just_pressed("jump") and player.jump_was_released:
+		return fly_state
+	
+	
+	if player.velocity.y > 0: #remember... positive is down down down
 		return fall_state
+	
 	
 	if player.is_on_floor():
 		if move != 0:
@@ -49,3 +67,4 @@ func physics_process(delta: float) -> BaseState:
 		return idle_state
 	
 	return null
+		

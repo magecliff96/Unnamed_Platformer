@@ -1,41 +1,50 @@
 class_name Player
 extends KinematicBody2D
 
-#configurable inputs to be inherited
+#externally configurable inputs to be inherited
 export (float) var move_speed
 export (float) var jump_height
 export (float) var jump_time_to_peak 
 export (float) var jump_time_to_descent 
 
+#initialize velocity?
 var velocity := Vector2.ZERO
 
+#jump velocity and gravity calculation (scale inversely to jump time)
 onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
 onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
-onready var animations = $animations
+#link that connects animation and state manager(controling animation) to the script
+onready var animations = $AnimatedSprite
 onready var states = $state_manager
+
 
 var was_on_floor : bool
 export var coyote_timer : float 
 var coyote_threshold : float = 0.1
 var jump_was_released: bool
 
+
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,
 	# that way they can move and react accordingly
 	states.init(self)
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	states.input(event)
 
+#Coyote proccess seems to be calculating physics update... 
 func _physics_process(delta: float) -> void:
 	states.physics_process(delta)
 	self.coyote_process(delta)
 
+
 func _process(delta: float) -> void:
 	states.process(delta)
 
+#Coyote proccess seems to be calculating physics update... 
 func coyote_process(delta: float) -> void:
 	coyote_timer -= delta
 
@@ -49,6 +58,7 @@ func coyote_process(delta: float) -> void:
 		self.was_on_floor = true
 	else:
 		self.was_on_floor = false
+
 
 func is_coyote_active() -> bool:
 	if self.coyote_timer > 0:
