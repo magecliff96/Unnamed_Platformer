@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Floor/tile2.png" type="Texture" id=2]
 [ext_resource path="res://assets/Floor/cave.png" type="Texture" id=3]
+[ext_resource path="res://src/Player/Enemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -56,5 +57,9 @@ limit_left = 0
 limit_top = 0
 limit_right = 2048
 limit_bottom = 1216
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 441, 117 )
+scale = Vector2( 16, 16 )
 
 [editable path="Player"]
