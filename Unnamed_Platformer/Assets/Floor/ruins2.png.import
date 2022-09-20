@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/animations.png-0d1c19b72e2812366c3854ab7ac47c7f.stex"
+path="res://.import/ruins2.png-d3761a8b8a2c12ba5e6725b330f7ddf8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/animations.png"
-dest_files=[ "res://.import/animations.png-0d1c19b72e2812366c3854ab7ac47c7f.stex" ]
+source_file="res://Assets/Floor/ruins2.png"
+dest_files=[ "res://.import/ruins2.png-d3761a8b8a2c12ba5e6725b330f7ddf8.stex" ]
 
 [params]
 
