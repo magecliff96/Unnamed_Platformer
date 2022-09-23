@@ -14,17 +14,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Player/Actor.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "BaseState",
 "language": "GDScript",
 "path": "res://src/Player/States/base_state.gd"
 }, {
-"base": "Reference",
+"base": "BaseState",
 "class": "MoveState",
 "language": "GDScript",
 "path": "res://src/Player/States/move.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://src/Player/Player.gd"
@@ -41,6 +41,10 @@ _global_script_class_icons={
 config/name="Unnamed Platformer"
 run/main_scene="res://src/Level/MainScene.tscn"
 config/icon="res://icon.png"
+
+[global]
+
+import=false
 
 [gui]
 

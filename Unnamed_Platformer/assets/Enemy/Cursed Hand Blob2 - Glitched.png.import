@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cursed Hand Blob2 - Glitched.png-af6b806aeaf11e6134a528901689c440.stex"
+path="res://.import/Cursed Hand Blob2 - Glitched.png-cddd078f59e6cb15060caeb5b87fea2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemy/Cursed Hand Blob2 - Glitched.png"
-dest_files=[ "res://.import/Cursed Hand Blob2 - Glitched.png-af6b806aeaf11e6134a528901689c440.stex" ]
+source_file="res://assets/Enemy/Cursed Hand Blob2 - Glitched.png"
+dest_files=[ "res://.import/Cursed Hand Blob2 - Glitched.png-cddd078f59e6cb15060caeb5b87fea2e.stex" ]
 
 [params]
 
