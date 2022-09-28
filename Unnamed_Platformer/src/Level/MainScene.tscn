@@ -64,6 +64,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 202, 68 )
 
+[node name="AnimatedSprite" parent="Player" index="1"]
+animation = "dash"
+
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = 0
 limit_top = 0

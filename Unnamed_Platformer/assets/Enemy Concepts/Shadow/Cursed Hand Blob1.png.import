@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex"
+path="res://.import/Cursed Hand Blob1.png-4bf80b71ebf6c8ba70ad76a8e6d86d8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Portals/menu_portal_1.png"
-dest_files=[ "res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex" ]
+source_file="res://assets/Enemy Concepts/Shadow/Cursed Hand Blob1.png"
+dest_files=[ "res://.import/Cursed Hand Blob1.png-4bf80b71ebf6c8ba70ad76a8e6d86d8c.stex" ]
 
 [params]
 

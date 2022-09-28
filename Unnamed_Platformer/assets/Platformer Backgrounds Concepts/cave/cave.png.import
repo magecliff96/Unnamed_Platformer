@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/animations_upscaled.png-2e3e9173904e2aad39c4beefdcfd847e.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://assets/Player/animations_upscaled.png"
-dest_files=[ "res://.import/animations_upscaled.png-2e3e9173904e2aad39c4beefdcfd847e.stex" ]
-
+source_file="res://assets/Platformer Backgrounds Concepts/cave/cave.png"
 [params]
 
 compress/mode=0

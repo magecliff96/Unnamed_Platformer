@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex"
+path="res://.import/Shadow Enemy Concept9.png-52f2b46dee6e48eec85d2eefe2e60f74.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Portals/menu_portal_1.png"
-dest_files=[ "res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex" ]
+source_file="res://assets/Enemy Concepts/Shadow/Shadow Enemy Concept9.png"
+dest_files=[ "res://.import/Shadow Enemy Concept9.png-52f2b46dee6e48eec85d2eefe2e60f74.stex" ]
 
 [params]
 

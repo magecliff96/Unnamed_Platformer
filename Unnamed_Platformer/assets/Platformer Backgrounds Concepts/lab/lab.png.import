@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://Assets/Portals/menu_portal_1.png"
-dest_files=[ "res://.import/menu_portal_1.png-81048e73a76fe4644c1e08321e71556a.stex" ]
-
+source_file="res://assets/Platformer Backgrounds Concepts/lab/lab.png"
 [params]
 
 compress/mode=0
