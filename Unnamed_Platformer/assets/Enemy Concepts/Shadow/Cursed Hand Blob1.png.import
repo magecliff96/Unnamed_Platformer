@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< Updated upstream:Unnamed_Platformer/assets/Enemy Concepts/Shadow/Cursed Hand Blob1.png.import
 path="res://.import/Cursed Hand Blob1.png-4bf80b71ebf6c8ba70ad76a8e6d86d8c.stex"
+=======
+path="res://.import/animations_upscaled.png-7546a5231c8daa9619978c483de59c82.stex"
+>>>>>>> Stashed changes:Unnamed_Platformer/assets/Player/animations_upscaled.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Unnamed_Platformer/assets/Enemy Concepts/Shadow/Cursed Hand Blob1.png.import
 source_file="res://assets/Enemy Concepts/Shadow/Cursed Hand Blob1.png"
 dest_files=[ "res://.import/Cursed Hand Blob1.png-4bf80b71ebf6c8ba70ad76a8e6d86d8c.stex" ]
+=======
+source_file="res://assets/player/animations_upscaled.png"
+dest_files=[ "res://.import/animations_upscaled.png-7546a5231c8daa9619978c483de59c82.stex" ]
+>>>>>>> Stashed changes:Unnamed_Platformer/assets/Player/animations_upscaled.png.import
 
 [params]
 
